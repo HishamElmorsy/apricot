@@ -1,0 +1,90 @@
+🎮 Game Deals Tracker – CS50 Final Project
+1. 💡 Core Functionality
+API Integration:
+The app will use the CheapShark API to fetch real-time game deal data.
+
+User Interface (UI):
+Built with Bootstrap 5 for a responsive and modern design.
+Note: All UI elements and code comments will be written in English.
+
+2. 🏠 Best Deals Page (Home Page)
+Default View:
+Displays a list of the top current game deals from the CheapShark API.
+
+Sorting Options:
+Users can sort the deals by:
+
+Highest Discount
+
+Best Rating
+
+Lowest Price
+
+Most Recent
+
+Search Functionality:
+
+A search bar allows users to search across all games by title.
+
+Autocomplete will show up to 5 matching results as the user types.
+
+Load More Button:
+
+Loads additional results while keeping the current sort and search filters.
+
+3. 👤 User Accounts & Authentication
+User Registration:
+Users can sign up with a unique username and password.
+Passwords will be stored hashed for security.
+
+User Login & Session Management:
+
+Registered users can log in with their credentials.
+
+Sessions will remain active across pages using cookies or sessions.
+
+Users can log out at any time.
+
+4. 💖 Wishlist Functionality
+Personal Wishlist:
+Logged-in users will have a dedicated wishlist page.
+
+Add to Wishlist:
+
+Users can add games from the deals page to their wishlist.
+
+The system will store:
+
+Game title
+
+CheapShark Game ID
+
+Duplicate entries for the same user will be prevented.
+
+Remove from Wishlist:
+Users can remove games from their wishlist at any time.
+
+5. 🗄️ Database (SQLite)
+users table:
+
+id	username	hashed_password
+
+wishlist table:
+
+id	user_id (foreign key)	game_title	cheapshark_game_id
+
+6. 🎨 UI/UX Design
+Custom Colors:
+
+Primary: #98FBCB (light green-cyan)
+
+Accent: #FFD3AC (light peach-orange) (light peach-orange)
+
+Theme Toggle:
+
+Default: Light Mode
+
+Users can switch to Dark Mode
+
+Theme preference is stored using localStorage
+
