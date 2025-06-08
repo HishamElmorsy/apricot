@@ -1,0 +1,16 @@
+<h2>Search results for "{{ query }}"</h2>
+
+{% if error %}
+  <p>{{ error }}</p>
+{% elif deals %}
+  <ul>
+    {% for deal in deals %}
+      <li>
+        {{ deal.title }} - ${{ deal.salePrice }} (Discount: {{ deal.savings | float | round(0) }}%)
+        <a href="https://www.cheapshark.com/redirect?dealID={{ deal.dealID }}" target="_blank">View Deal</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No deals found.</p>
+{% endif %}
